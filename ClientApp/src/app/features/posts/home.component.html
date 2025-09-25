@@ -1,0 +1,26 @@
+<section>
+  <h1>Blog Yazıları</h1>
+  <p class="subtitle">Topluluktan en güncel paylaşımlar</p>
+  <ng-container *ngIf="!loading(); else loadingTemplate">
+    <mat-card *ngFor="let post of posts()" class="post-card">
+      <mat-card-header>
+        <mat-card-title>{{ post.title }}</mat-card-title>
+        <mat-card-subtitle>
+          {{ post.authorEmail }} &bull; {{ post.createdAt | date: 'dd MMM yyyy HH:mm' }}
+        </mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <p>{{ post.content | slice: 0:220 }}{{ post.content.length > 220 ? '...' : '' }}</p>
+        <mat-chip-set>
+          <mat-chip color="primary" selected>{{ post.categoryName }}</mat-chip>
+        </mat-chip-set>
+      </mat-card-content>
+      <mat-card-actions>
+        <a mat-raised-button color="primary" [routerLink]="['/post', post.id]">Detaylar</a>
+      </mat-card-actions>
+    </mat-card>
+  </ng-container>
+  <ng-template #loadingTemplate>
+    <p>Yazılar yükleniyor...</p>
+  </ng-template>
+</section>

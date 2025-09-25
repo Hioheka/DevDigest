@@ -1,0 +1,25 @@
+.tab-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 1.5rem 0;
+}
+
+.category-form {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+
+  mat-form-field {
+    width: 100%;
+  }
+}
+
+.actions {
+  display: flex;
+  gap: 0.75rem;
+}
+
+mat-card {
+  box-shadow: 0 15px 35px rgba(15, 23, 42, 0.12);
+}

@@ -1,0 +1,27 @@
+.app-toolbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  gap: 1rem;
+
+  .logo {
+    font-weight: 700;
+    font-size: 1.2rem;
+    cursor: pointer;
+  }
+
+  .spacer {
+    flex: 1;
+  }
+
+  .active-link {
+    font-weight: 600;
+  }
+}
+
+.app-content {
+  padding: 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}

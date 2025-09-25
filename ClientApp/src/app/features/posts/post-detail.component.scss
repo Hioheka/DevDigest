@@ -1,0 +1,31 @@
+.detail-card {
+  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.1);
+  padding: 1rem;
+}
+
+.comment-form {
+  margin: 1.5rem 0;
+
+  .full-width {
+    width: 100%;
+  }
+}
+
+.comments {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  .comment {
+    padding: 1rem;
+    border-radius: 0.75rem;
+    background: rgba(99, 102, 241, 0.08);
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      color: #475569;
+      margin-bottom: 0.5rem;
+    }
+  }
+}
