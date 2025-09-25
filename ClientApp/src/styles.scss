@@ -1,1 +1,33 @@
-/* You can add global styles to this file, and also import other style files */
+@use '@angular/material' as mat;
+
+@include mat.core();
+
+$primary: mat.define-palette(mat.$indigo-palette);
+$accent: mat.define-palette(mat.$pink-palette);
+$warn: mat.define-palette(mat.$red-palette);
+
+$theme: mat.define-light-theme((
+  color: (
+    primary: $primary,
+    accent: $accent,
+    warn: $warn,
+  ),
+  typography: mat.define-typography-config(),
+));
+
+@include mat.all-component-themes($theme);
+
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: #f6f8fb;
+  color: #1f2933;
+}
+
+a {
+  text-decoration: none;
+}
+
+mat-card {
+  margin-bottom: 1.5rem;
+}

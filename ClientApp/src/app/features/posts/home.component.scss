@@ -1,0 +1,14 @@
+section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.subtitle {
+  color: #64748b;
+  margin: 0;
+}
+
+.post-card {
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.1);
+}
